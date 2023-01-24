@@ -163,6 +163,32 @@
       </div>
       
     </div>
+    <div class="content">
+      <h1>split tensile strength</h1>
+      <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque 
+         expedita atque eveniet <br> quis nesciunt. Quos nulla vero consequuntur, fugit nemo ad delectus 
+         <br> a quae totamipsa illum minus laudantium?</p>
+    
+      <div class="form">
+        <form id="concrete">
+            <h2>split tensile strength</h2>
+            <h1>enter the load at failure :</h1> <input type="text"
+            id="P" /><br>
+            <h1> enter the diameter of the specimen: </h1><input type="text" 
+            id="D" /><br>
+            <h1>enter the length of the specimen: </h1><input type="text" 
+            id="L" /><br>
+            <input class='btn' type="button" onClick="splittensilestrength()"
+             Value="calculate" />
+        </form>
+
+        <p><h2>The Result is : <br>
+          <span id = "S"></span></h2>
+        </p>
+          
+
+      </div>
+    </div>
       
   </div>
   
@@ -224,6 +250,21 @@
         val = w1/w;
       document.getElementById(
         "result").innerHTML = val
+    }
+    
+  function splittensilestrength() 
+    { 
+      P = document.getElementById(
+        "P").value;
+      D = document.getElementById(
+        "D").value;
+      L= document.getElementById(
+        "L").value;
+      S=(2*P)/(3.14*D*L)
+        
+
+      document.getElementById(
+        "S").innerHTML = S
     }
 </script>
 
