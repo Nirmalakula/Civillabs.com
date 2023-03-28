@@ -40,14 +40,15 @@
     
         <div class="card-container">
           <div class="card" onclick="showDetails(this)">
-           <img src="working.jpg" alt="Image" class="card-img">
+           <img src="concretett.jpg" alt="Image" class="card-img">
            <div class="card-content">
               <h2 class="card-title">Tests on concrete</h2>
              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-             <button class="btn" onclick="showconcrete()">compressive strength</a></button>
-             <button class="btn" onclick="showflowtable()">FLOWTABLETEST</a></button>
-             <button class="btn" onclick="settingtime()">settingtime</a></button>
-             <button class="btn" onclick="showsplittensile()">splittensilestrength</a></button>
+             <button class="btnof" onclick="showconcrete()">compressive strength</a></button>
+             <button class="btnof" onclick="showflowtable()">Flow table test</a></button>
+             <button class="btnof" onclick="showflexuralstrength()">Flexural strength</button>
+             <!--<button class="btn" onclick="settingtime()">settingtime</a></button>-->
+             <button class="btnof" onclick="showsplittensile()">splittensilestrength</a></button>
 
            </div>
            <div class="card-details">
@@ -56,13 +57,11 @@
          </div>
 
           <div class="card" onclick="showDetails(this)">
-            <img src="working.jpg" alt="Image" class="card-img">
+            <img src="cemetest.jpg" alt="Image" class="card-img">
            <div class="card-content">
               <h2 class="card-title">Tests on cement</h2>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button class="btn" onclick="showfineness()">finenes test </button>
-              <button class="btn" onclick="showflexuralstrength()">Flexural strength</button>
-              <button class="btn" onclick="showsg()">specific gravity</button>
+              <button class="btnof" onclick="showfineness()">fineness of cement </button>
+              <button class="btnof" onclick="showsg()">specific gravity</button>
 
             </div>
             <div class="card-details">
@@ -72,14 +71,14 @@
 
 
          <div class="card" onclick="showDetails(this)">
-            <img src="working.jpg" alt="Image" class="card-img">
+            <img src="Aggregates.jpg" alt="Image" class="card-img">
            <div class="card-content">
               <h2 class="card-title">Tests on aggregate</h2>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
              
-             <button class="btn" onclick="showbulkingofsand()">Bulking of sand</button>
-             <button class="btn" onclick="showunitweight()">unit weight of aggregates</button>
-             <button class="btn" onclick="showsgc()">specific gravity of aggregates</button>
+             <button class="btnof" onclick="showbulkingofsand()" >Bulking of sand</button>
+             <button class="btnof" onclick="showunitweight()">unit weight of aggregates</button>
+             <button class="btnof" onclick="showsgc()">specific gravity of aggregates</button>
 
             </div>
            <div class="card-details">
@@ -118,15 +117,15 @@
           <div class="form" id="asz" style="display: none;">
             <form id="concrete">
                 <h2>Compressive strength</h2>
-                <h1>Enter the breadth:</h1> <input type="text"
+                <h1>Enter the breadth in (mm):</h1> <input type="text"
                 id="firstNumber" /><br>
-                <h1>Enter the depth: </h1><input type="text" 
+                <h1>Enter the depth in (mm): </h1><input type="text" 
                 id="secondNumber" /><br>
-                <h1>Enter the failure load for sample 1: </h1><input type="text" 
+                <h1>Enter the failure load for sample 1 in (N): </h1><input type="text" 
                 id="third number" /><br>
-                <h1>Enter the failure load for sample 2 :</h1><input type="text" 
+                <h1>Enter the failure load for sample 2 in (N) :</h1><input type="text" 
                 id="fourth number" /><br>
-                <h1>Enter the failure loadfor sample 3: </h1><input type="text" 
+                <h1>Enter the failure loadfor sample 3 in (N): </h1><input type="text" 
                 id="fifth number" /><br>
                 
                 <input class='btn' type="button" onClick="concretetest()" 
@@ -134,7 +133,7 @@
             </form>
 
              
-              <p><h2>The Result is : <br>
+              <p><h2>The Result is in (N/mm^2) : <br>
                 <span id = "resultloa"></span></h2>
               </p>
 
@@ -144,20 +143,10 @@
 
     </div>
 
-    <div class="content" id="settingtime" style="display: none;">
-        <h1>Setting time Test</h1>
-        <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque 
-            expedita atque eveniet <br> quis nesciunt. Quos nulla vero consequuntur, fugit nemo ad delectus 
-           <br> a quae totamipsa illum minus laudantium?</p>
-    
-        
-        
-    
-    </div>
 
 
     <div class="content" id="specificgravity" style="display: none;">
-      <h1>Specific Gravity Test</h1>
+      <h1>Specific Gravity of cement</h1>
       <p class="par">The  specific gravity of cement is the weight of particular volume of cement , compared to the weight of the very small amount of water at the given temperature .
         <br> for cement , specific gravity lies at the 3.15 g/cc that indicates that the cement is 3.15 times heavier
         <br> than the same volume of the water.</p>
@@ -170,14 +159,14 @@
   
       <div class="form" >
           <form id="concrete">
-              <h2>Specific Gravity Test</h2>
-              <h1>Enter the weight of empty flask:</h1> <input type="text"
+              <h2>Specific Gravity of cement</h2>
+              <h1>Enter the weight of empty flask, W1 in (gm):</h1> <input type="text"
               id="W1" /><br>
-              <h1> Weight of cement in flask: </h1><input type="text" 
+              <h1> Weight of cement in flask,W2 in (gm): </h1><input type="text" 
               id="W2" /><br>
-              <h1>Enter the weight of mixture of kerosene to the sample : </h1><input type="text" 
+              <h1>Enter the weight of mixture of kerosene to the sample,W3 in (gm) : </h1><input type="text" 
               id="W3" /><br>
-              <h1>Enter the weight of kerosene only in the bottle to the tip: </h1><input type="text" 
+              <h1>Enter the weight of kerosene only in the bottle to the tip,W4 in (gm): </h1><input type="text" 
               id="W4" /><br>
               <input class='btn' type="button" onClick="SpecificGravity()" 
                Value="calculate" />
@@ -552,10 +541,11 @@
       W4 =document.getElementById(
         "W4").value;
         g=(W2-W1);
-        Sg=g-(W3-W4);
+        s=(W3-W4);
+        Sg=g-s ;
 
       document.getElementById(
-        "Sg").innerHTML = Sg*0.79
+        "Sg").innerHTML = g/Sg*0.79
     }
     function showsg() {
       var div= document.getElementById('specificgravity')
